@@ -1,0 +1,202 @@
+% Preamble
+\documentclass[a4paper]{scrartcl}
+\usepackage{latexsym}
+\usepackage[nomarginpar]{geometry}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage[none]{hyphenat}
+\usepackage{setspace}
+\usepackage{times}
+\usepackage[fontsize=10.5bp]{fontsize}
+
+% Page setup
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\geometry{
+    a4paper,
+    lmargin=0.45in,
+    rmargin=0.45in,
+    tmargin=0.45in,
+    bmargin=0.45in,
+}
+
+% Content formatting
+\urlstyle{rm}
+\raggedbottom
+\raggedright
+
+% Table formatting
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+    \vspace{-6pt}\bfseries\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Custom Commands -------------------
+\newcommand{\resumeSectionListStart}{\begin{itemize}[leftmargin=0pt, label = {}, itemsep=6pt, topsep=2pt]}
+\newcommand{\resumeSectionListEnd}{\end{itemize}\vspace{-0.7em}}
+
+\newcommand{\resumeSectionList}[5]{
+    \item
+    \makebox[\textwidth]{
+        \begin{minipage}{0.993\textwidth}
+            \begin{tabularx}{\textwidth}{Xr}
+                \textbf{#1} & #2 \\
+                #3 & \textls[-30]{#4} \\
+            \end{tabularx}
+            \vspace{-1pt}
+            #5
+        \end{minipage}
+    }
+    \vspace{-6pt}
+}
+
+\renewcommand{\labelitemii}{\textbullet}
+
+% Section List - Description List
+\newcommand{\sectionListDescriptionStart}{\vspace{-5pt}\begin{itemize}[leftmargin=0.35cm, itemsep=-3pt, topsep=0.2em]}
+\newcommand{\sectionListDescriptionEnd}{\end{itemize}}
+
+\newcommand{\sectionListDescription}[1]{
+    \item \textls[-10]{\small#1}
+}
+
+% Document -----------------------
+\begin{document}
+
+% Heading and contact details ---------
+\begin{tabularx}{\textwidth}{Xr}
+    \textbf{{\LARGE Nikilesh Anusha N}} & \href{mailto:nikilnatesh@gmail.com}{nikilnatesh@gmail.com} $|$ +91-9442930141 \\
+    Master of Arts in General Economics (2023) & \\
+    \multicolumn{2}{l}{\parbox{\textwidth}{{\href{https://drive.google.com/drive/folders/1StHUmaa_8Rl1F6QX4WnqLDe8kx4IFtfE?usp=share_link}{\textcolor{MidnightBlue}{Writing Portfolio: Academic Research Sample (Google Drive Folder)}}}}}\\
+\end{tabularx}\vspace{-3pt}
+
+% Education ------------
+\section{Education}
+\resumeSectionListStart
+    \resumeSectionList
+        {Madras School of Economics}{Chennai, India}
+        {Master of Arts - General Economics;   CGPA: 7.67 / 10}{August 2021 - May 2023}
+        {\raggedright\textls[-40]{\small\itshape\textbf{Relevant Coursework:} Dissertation, Development Economics, Applied Microeconometrics, Environment \& Health, Industrial Org, Games \& Information}}
+    \resumeSectionList
+        {Christ (Deemed to be University)}{Bangalore, India}
+        {Bachelor of Arts (Honors) Economics;  CGPA: 3.86 / 4}{June 2018 - May 2021}
+        {\raggedright\textls[-40]{\small\itshape\textbf{Relevant Coursework:} Dissertation, Microeconomics, Research Methodoloy, Fundamentals of Growth \& Development, Advanced Econometrics, Behavioral Economics,  Public Economics, Computer Applications for Economics, Environmental Economics}}
+\resumeSectionListEnd
+
+% Experience ------------
+\section{Research Experience}
+\resumeSectionListStart
+    \resumeSectionList
+        {Data, Policy and Innovation Centre {\footnotesize\normalfont\textls[-20]{(A University of Chicago and Gov. of Odisha Partnership)}}}{Bhubaneshwar, India}
+        {\itshape Research Associate}{February 2024 - Present}
+        {
+            \sectionListDescriptionStart
+                \sectionListDescription{Managed end-to-end research for 2000-household flood adaptation study: survey design, fieldwork, data cleaning, descriptive analysis, mapping, and stakeholder reporting.}
+                \sectionListDescription{Developed ETL data pipelines for government datasets (Gramodaya, SPDP, Health Assurance) including API extraction and DB setup, producing reproducible analytics.}
+                \sectionListDescription{Spearheaded department-wide (13 line departments) data capability assessment impacting policy on departmental data officer appointments; co-led a high-impact workshop on effective data use principles.}
+                \sectionListDescription{Presented critical data-driven findings and strategic recommendations to senior government officials (State Development Commissioner, Principal Secretary), shaping departmental data modernization efforts.}
+            \sectionListDescriptionEnd
+        }
+    \resumeSectionList
+        {The Energy and Resources Institute}{New Delhi, India}
+        {\itshape Project Associate, Centre for Resource Efficiency and Governance}{23\textsuperscript{rd} August, 2023 -- 31\textsuperscript{st} January, 2024}
+        {
+            \sectionListDescriptionStart
+                \sectionListDescription{Contributed to research on alternate livelihood opportunity for informal coal mining workers and ecosystem service valuation of high-altitude wetlands in Uttarakhand and Ladakh.}
+                \sectionListDescription{Led literature review, survey instrument design, fieldwork, analytical framework review, and data analysis; collaborated on drafting and presenting the final technical report.}
+            \sectionListDescriptionEnd
+        }
+    \resumeSectionList
+        {Indian Institute of Management, Indore}{Remote}
+        {\itshape Research Intern, Under the Mentorship of Dr. Sneha Thapliyal}{23\textsuperscript{rd} April, 2020 -- 8\textsuperscript{th} June, 2020}
+        {
+            \vspace{1pt}
+            {\hspace*{-0.1cm}\small\textls[-20]{\textbf{Project:} Environment Regulation and Public Choice: A Study into the National Green Tribunal (NGT)}\vspace{0.4em}}
+            \sectionListDescriptionStart
+                \sectionListDescription{Assisted with data collection and conducted literature review of regulatory choice models related to environmental justice.}
+                \sectionListDescription{Unique contribution by creating a Database with essential information summarizing the judgements of the NGT for the years 2018-2020.}
+            \sectionListDescriptionEnd
+        }
+    \resumeSectionList
+        {Centre for Economics and Social Studies, Hyderabad}{Remote}
+        {\itshape Research Intern, Under the Mentorship of Dr. Vidya CT}{28\textsuperscript{th} March, 2020 -- 15\textsuperscript{th} May, 2020}
+        {   
+            \vspace{1pt}
+            {\hspace*{-0.1cm}\small\textls[-20]{\textbf{Project:} Linking SMEs into Global Value Chains with special emphasis on Textile Industries}\vspace{0.4em}}
+            \sectionListDescriptionStart
+                \sectionListDescription{Conducted literature review and collected primary data through one-on-one interviews with SME stakeholders in the textile sector.}
+                \sectionListDescription{Identified critical research gaps that contributed to refining the primary research question and study design.}
+            \sectionListDescriptionEnd
+        }
+\resumeSectionListEnd
+
+% Independent Research ------------
+\section{Independent Research Projects}
+\resumeSectionListStart
+    \resumeSectionList
+        {Energy Decomposition, Decoupling and Spatial Heterogeneity: A Study from the Indian Manufacturing Sector}
+        {} %empty  stub
+        {\textit{Masters Thesis $|$ Invited Paper Presenter at the 11th National Seminar on Industrial Statistics, 2023}}
+        {} %empty stub
+        {   
+            \sectionListDescriptionStart
+                \sectionListDescription{Investigated energy-growth decoupling hypothesis in India’s manufacturing sector using spatial, index, and causal decomposition analyses.}
+                \sectionListDescription{Extended a two-factor energy decomposition model to a five-factor IQAT framework, adapting the IPAT model for sectoral energy analysis.}
+            \sectionListDescriptionEnd
+        }
+    \resumeSectionList
+        {An Empirical Inquiry into the Distortionary Effect of Bank Bailout Policies in India}
+        {} %empty stub
+        {\textit{Co-authored with Sriram S $|$ Presented at YERC'21, Meghnad Desai Academy of Economics $|$ Best Paper Award}}
+        {} %empty stub
+        {
+            \sectionListDescriptionStart
+                \sectionListDescription{Investigated moral hazard in India’s banking sector using a two-stage game-theoretic framework and regression analysis.}
+            \sectionListDescriptionEnd
+        }
+    \resumeSectionList
+        {The Role of Bank Heterogeneity and Market Competition in Monetary Policy Transmission Mechanism}
+        {} %empty stub
+        {\textit{Undergraduate Thesis, 2021}}
+        {} %empty stub
+        {
+            \sectionListDescriptionStart
+                \sectionListDescription{Examined the impact of bank heterogeneity, market competition, and bank-specific factors on monetary policy transmission using dynamic panel regression with data from 69 Indian banks.}
+            \sectionListDescriptionEnd
+        }
+\resumeSectionListEnd
+
+% Skills Summary ------------
+\section{Skills Summary}
+\vspace{-2pt}
+\begin{itemize}[leftmargin=0pt, label = {}]
+    \item
+        \begin{tabularx}{\textwidth}{p{3cm}X}
+            \multirow{2}{=}{\textbf{Programming}} 
+            & \textbf{Proficient:} R, Stata, LaTeX, SurveyCTO, Git/GitHub \\
+            & \textbf{Beginner: } Python \\
+        \end{tabularx}
+    \item 
+        \vspace{-5pt}
+        \begin{tabularx}{\textwidth}{p{3cm}X}
+            \textbf{Languages}& \textbf{Proficient:} English, Tamil, Hindi\\
+        \end{tabularx}
+\end{itemize}
+
+\end{document}
